@@ -8,8 +8,8 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-user = os.getenv("USER")
-password = os.getenv("PASSWORD")
+user = os.getenv("DB_USER")
+password = os.getenv("DB_PASSWORD")
 db_host = os.getenv("DB_HOST")
 db_name = os.getenv("DB_NAME")
 
