@@ -14,6 +14,7 @@ db_host = os.getenv("DB_HOST")
 db_name = os.getenv("DB_NAME")
 
 engine = create_engine(f'postgresql://{user}:{password}@{db_host}/{db_name}')
+print(engine)
 
 
 Base = declarative_base()
@@ -39,7 +40,7 @@ class RestaurantCRUD():
     engine = ""
     session = ""
     def __init__(self):
-        self.engine = create_engine("postgresql://postgres:postgres@uecinformal_db/uecinformal")
+        self.engine = create_engine(f'postgresql://{user}:{password}@{db_host}/{db_name}')
         Session = sessionmaker(bind=engine)
         self.session = Session()
 
