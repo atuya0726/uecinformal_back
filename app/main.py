@@ -5,11 +5,9 @@ from fastapi.responses import JSONResponse
 from db import RestaurantCRUD
 
 from fastapi.middleware.cors import CORSMiddleware
-from mangum import Mangum
 
 
 app = FastAPI()
-handler = Mangum(app)
 
 app.add_middleware(
     CORSMiddleware,
